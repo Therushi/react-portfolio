@@ -1,21 +1,22 @@
 import { Button } from "@/components/ui/button";
+import { NavLink } from "react-router";
 
 const navBar: { name: string; route: string }[] = [
   {
     name: "Projects",
-    route: "/project",
+    route: "/projects",
   },
   {
     name: "Contact",
-    route: "/project",
+    route: "/contact",
   },
   {
     name: "Skills",
-    route: "/project",
+    route: "/skills",
   },
   {
     name: "Experience",
-    route: "/project",
+    route: "/projects",
   },
 ];
 function NavBar() {
@@ -30,9 +31,12 @@ function NavBar() {
             {navBar
               ? navBar.map((item) => {
                   return (
-                    <li className="cursor-pointer hover:underline">
+                    <NavLink
+                      to={item.route}
+                      className="cursor-pointer hover:underline"
+                    >
                       {item.name}
-                    </li>
+                    </NavLink>
                   );
                 })
               : ""}
