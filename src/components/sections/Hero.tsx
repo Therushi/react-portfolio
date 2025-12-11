@@ -14,6 +14,35 @@ function Hero() {
             </div>
 
             <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+                {/* Profile Photo */}
+                <div className="mb-8 animate-fade-in">
+                    <div className="relative inline-block">
+                        {/* Animated gradient background */}
+                        <div className="absolute -inset-4 bg-gradient-to-br from-blue-400 via-blue-600 to-blue-800 rounded-3xl blur-xl opacity-30 animate-pulse-slow" />
+
+                        {/* Main photo container - Rounded rectangle with creative tilt */}
+                        <div className="relative group">
+                            {/* Gradient border effect */}
+                            <div className="absolute -inset-1 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500" />
+
+                            {/* Photo frame */}
+                            <div className="relative w-48 h-56 sm:w-56 sm:h-64 lg:w-64 lg:h-72 rounded-2xl overflow-hidden bg-white p-1">
+                                <div className="w-full h-full rounded-xl overflow-hidden shadow-2xl">
+                                    <img
+                                        src="/profile.jpg"
+                                        alt="Rushikesh Dhanawade"
+                                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Decorative corner accents */}
+                            <div className="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-blue-500 rounded-tl-xl opacity-60" />
+                            <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-4 border-r-4 border-blue-500 rounded-br-xl opacity-60" />
+                        </div>
+                    </div>
+                </div>
+
                 {/* Greeting */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium mb-8 animate-fade-in">
                     <span className="relative flex h-2 w-2">
