@@ -1,6 +1,9 @@
+
 import NavBar from "@/components/core/NavBar";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
+import Experience from "@/components/sections/Experience";
+import Projects from "@/components/sections/Projects";
 
 function Home() {
   return (
@@ -13,25 +16,11 @@ function Home() {
       {/* About Section */}
       <About />
 
-      {/* Experience Section - Placeholder */}
-      <section id="experience" className="min-h-screen flex items-center justify-center bg-gray-50 py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8">Experience</h2>
-          <p className="text-lg text-gray-600">
-            Experience section coming soon...
-          </p>
-        </div>
-      </section>
+      {/* Experience Section */}
+      <Experience />
 
-      {/* Projects Section - Placeholder */}
-      <section id="projects" className="min-h-screen flex items-center justify-center bg-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8">Projects</h2>
-          <p className="text-lg text-gray-600">
-            Projects section coming soon...
-          </p>
-        </div>
-      </section>
+      {/* Projects Section */}
+      <Projects />
 
       {/* Skills Section - Placeholder */}
       <section id="skills" className="min-h-screen flex items-center justify-center bg-gray-50 py-20">
@@ -61,7 +50,7 @@ function Home() {
           </p>
         </div>
       </footer>
-    </div>
+    </div >
   );
 }
 
