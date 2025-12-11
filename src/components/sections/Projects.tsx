@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Zap, TrendingUp, Code2, Layout, ArrowUpRight } from "lucide-react";
+import { Github, Zap, TrendingUp, Code2, Layout, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const projects = [
