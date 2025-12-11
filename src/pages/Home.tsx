@@ -1,5 +1,6 @@
 import NavBar from "@/components/core/NavBar";
 import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
 
 function Home() {
   return (
@@ -9,15 +10,8 @@ function Home() {
       {/* Hero Section */}
       <Hero />
 
-      {/* About Section - Placeholder */}
-      <section id="about" className="min-h-screen flex items-center justify-center bg-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8">About</h2>
-          <p className="text-lg text-gray-600">
-            About section coming soon...
-          </p>
-        </div>
-      </section>
+      {/* About Section */}
+      <About />
 
       {/* Experience Section - Placeholder */}
       <section id="experience" className="min-h-screen flex items-center justify-center bg-gray-50 py-20">
