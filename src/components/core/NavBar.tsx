@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
+  // { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
   { name: "Contact", href: "#contact" },
 ];
@@ -46,7 +46,10 @@ function NavBar() {
   }, []);
 
   // Handle smooth scroll
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
 
@@ -89,10 +92,11 @@ function NavBar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
-          : "bg-white"
-          }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
+            : "bg-white"
+        }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -120,20 +124,24 @@ function NavBar() {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${activeSection === item.href
-                    ? "text-blue-600 bg-blue-50"
-                    : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                    }`}
+                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                    activeSection === item.href
+                      ? "text-blue-600 bg-blue-50"
+                      : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                  }`}
                 >
                   {item.name}
                 </a>
               ))}
               <Button
-                className="ml-2 bg-blue-600 hover:bg-blue-700 text-white shadow-sm"
+                className="ml-2 bg-blue-600 hover:bg-blue-700 text-white shadow-sm cursor-pointer"
                 size="sm"
                 onClick={() => {
                   // Add your resume download logic here
-                  window.open("/resume.pdf", "_blank");
+                  window.open(
+                    "https://rxresu.me/therushi/rushikesh-fullstack-resume-2026",
+                    "_blank"
+                  );
                 }}
               >
                 Resume
@@ -160,14 +168,16 @@ function NavBar() {
 
         {/* Mobile Menu Drawer */}
         <div
-          className={`md:hidden fixed inset-0 top-16 bg-black/20 backdrop-blur-sm transition-opacity duration-300 ${isMobileMenuOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-            }`}
+          className={`md:hidden fixed inset-0 top-16 bg-black/20 backdrop-blur-sm transition-opacity duration-300 ${
+            isMobileMenuOpen
+              ? "opacity-100 pointer-events-auto"
+              : "opacity-0 pointer-events-none"
+          }`}
         >
           <div
-            className={`bg-white border-t border-gray-100 shadow-lg transition-transform duration-300 ${isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
-              }`}
+            className={`bg-white border-t border-gray-100 shadow-lg transition-transform duration-300 ${
+              isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
+            }`}
           >
             <div className="px-4 py-4 space-y-1">
               {navItems.map((item) => (
@@ -175,10 +185,11 @@ function NavBar() {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${activeSection === item.href
-                    ? "text-blue-600 bg-blue-50"
-                    : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                    }`}
+                  className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${
+                    activeSection === item.href
+                      ? "text-blue-600 bg-blue-50"
+                      : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                  }`}
                 >
                   {item.name}
                 </a>

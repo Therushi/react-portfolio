@@ -125,7 +125,6 @@
 }
 
 @layer utilities {
-
   /* Hero animations */
   @keyframes fade-in {
     from {
@@ -201,7 +200,6 @@
   }
 
   @keyframes pulse {
-
     0%,
     100% {
       opacity: 0.75;
@@ -210,5 +208,32 @@
     50% {
       opacity: 1;
     }
+  }
+
+  /* Marquee Animations */
+  @keyframes marquee {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-50%);
+    }
+  }
+
+  @keyframes marquee-reverse {
+    from {
+      transform: translateY(-50%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  .animate-marquee-vertical {
+    animation: marquee 40s linear infinite;
+  }
+
+  .animate-marquee-vertical-reverse {
+    animation: marquee-reverse 40s linear infinite;
   }
 }
