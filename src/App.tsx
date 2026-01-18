@@ -1,18 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import "./App.css";
 import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
 
 function App() {
   return (
     <>
       <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route path="/projects" element={<Projects />}></Route>
-            <Route path="/contact" element={<Contact />}></Route>
-          </Route>
+          <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </>
