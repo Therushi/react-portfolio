@@ -34,7 +34,7 @@ function NavBar() {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     const sections = document.querySelectorAll("section[id]");
@@ -48,7 +48,7 @@ function NavBar() {
   // Handle smooth scroll
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
+    href: string,
   ) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
@@ -137,10 +137,9 @@ function NavBar() {
                 className="ml-2 bg-blue-600 hover:bg-blue-700 text-white shadow-sm cursor-pointer"
                 size="sm"
                 onClick={() => {
-                  // Add your resume download logic here
                   window.open(
                     "https://rxresu.me/therushi/rushikesh-fullstack-resume-2026",
-                    "_blank"
+                    "_blank",
                   );
                 }}
               >
@@ -199,7 +198,10 @@ function NavBar() {
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white shadow-sm"
                   onClick={() => {
                     setIsMobileMenuOpen(false);
-                    window.open("/resume.pdf", "_blank");
+                    window.open(
+                      "https://rxresu.me/therushi/rushikesh-fullstack-resume-2026",
+                      "_blank",
+                    );
                   }}
                 >
                   Download Resume
